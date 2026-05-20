@@ -298,7 +298,7 @@ def inject_styles() -> None:
 
             .section-heading {{
                 display: grid;
-                grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.6fr);
+                grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
                 gap: 2rem;
                 align-items: end;
                 margin-bottom: 1.6rem;
@@ -314,16 +314,16 @@ def inject_styles() -> None:
 
             .section h2 {{
                 margin: 0;
-                font-size: clamp(2rem, 3.4vw, 3.45rem);
-                line-height: 1.06;
+                font-size: clamp(1.7rem, 2.25vw, 2.6rem);
+                line-height: 1.12;
                 letter-spacing: 0;
             }}
 
             .section-desc {{
                 color: var(--muted);
-                line-height: 1.72;
+                line-height: 1.62;
                 margin: 0;
-                font-size: 1.02rem;
+                font-size: 0.98rem;
             }}
 
             .service-grid {{
@@ -621,6 +621,12 @@ def inject_styles() -> None:
                 border-radius: 6px;
             }}
 
+            @media (min-width: 901px) {{
+                .section h2 {{
+                    white-space: nowrap;
+                }}
+            }}
+
             @media (max-width: 900px) {{
                 .nav {{
                     position: relative;
@@ -771,11 +777,11 @@ def render_services() -> None:
             <div class="section-heading">
                 <div>
                     <div class="section-kicker">What We Do</div>
-                    <h2>从空间方案到现场施工的完整服务。</h2>
+                    <h2>设计施工一体化 · Design to Build</h2>
                 </div>
                 <p class="section-desc">
-                    HLY Construction Inc. 面向房主、业主和商业空间经营者，
-                    提供清晰、务实、可执行的设计施工服务。
+                    面向房主、业主和商业空间经营者，提供清晰务实的室内设计、
+                    空间规划与装修施工服务 · Clear design-build service for homes and businesses
                 </p>
             </div>
             <div class="service-grid">
@@ -806,11 +812,11 @@ def render_projects() -> None:
             <div class="section-heading">
                 <div>
                     <div class="section-kicker">Project Types</div>
-                    <h2>面向日常居住与商业运营的改造项目。</h2>
+                    <h2>住宅商业改造 · Remodel Projects</h2>
                 </div>
                 <p class="section-desc">
                     厨房、浴室、整屋翻新、办公室、零售展示空间、ADU 与 remodel，
-                    都可以从空间功能、预算控制和施工落地三个角度同步推进。
+                    从空间功能、预算控制和施工落地同步推进 · Residential and commercial upgrades
                 </p>
             </div>
             <div class="project-grid">
@@ -840,10 +846,11 @@ def render_process() -> None:
             <div class="section-heading">
                 <div>
                     <div class="section-kicker">How It Works</div>
-                    <h2>每一步都围绕范围、预算和质量展开。</h2>
+                    <h2>流程清晰 · Scope Budget Quality</h2>
                 </div>
                 <p class="section-desc">
-                    一个好的 remodel 项目，需要在设计阶段把现场条件、材料选择和施工顺序想清楚。
+                    好的 remodel 项目，需要在设计阶段明确现场条件、材料选择和施工顺序
+                    · Plan first, build with clarity
                 </p>
             </div>
             <div class="process">
@@ -862,7 +869,7 @@ def render_contact() -> None:
             <div class="split-band contact-overview">
                 <div>
                     <div class="section-kicker">Project Inquiry</div>
-                    <h2>把你的项目想法整理成第一版需求。</h2>
+                    <h2>项目咨询 · Project Inquiry</h2>
                     <p>
                         选择项目类型、面积和预算范围后，页面会生成一份简短项目摘要。
                         正式上线时可以接入邮箱、CRM 或第三方表单服务。
