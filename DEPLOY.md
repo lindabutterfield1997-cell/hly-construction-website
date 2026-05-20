@@ -13,10 +13,13 @@ www.hlyconstruction.net
 
 ## 1. 上传代码到 GitHub
 
-只需要上传这个文件夹：
+当前 GitHub 仓库根目录已经直接包含这些网站文件：
 
 ```text
-hly_construction_website/
+streamlit_app.py
+requirements.txt
+render.yaml
+assets/
 ```
 
 Render 需要从 GitHub / GitLab / Bitbucket 仓库读取代码并自动部署。
@@ -32,7 +35,7 @@ New > Web Service
 如果用手动配置，填写：
 
 ```text
-Root Directory: hly_construction_website
+Root Directory: 留空
 Build Command: pip install -r requirements.txt
 Start Command: streamlit run streamlit_app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true --browser.gatherUsageStats false
 ```
@@ -40,7 +43,7 @@ Start Command: streamlit run streamlit_app.py --server.address 0.0.0.0 --server.
 如果用 Blueprint，则选择这个文件：
 
 ```text
-hly_construction_website/render.yaml
+render.yaml
 ```
 
 首次部署成功后，Render 会给一个临时地址，类似：
